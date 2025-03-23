@@ -1,20 +1,7 @@
-import './App.css'
-
-import { LoginButton } from './Login/LoginButton'
-import { LogoutButton } from './Login/LogoutButton'
-import { Profile } from './Login/Profile'
+import { CommonLayout } from './layout/CommonLayout'
 
 function App() {
-  return (
-    <>
-      <h1>你好哇,我的朋友</h1>
-      <h2></h2>
-      <Profile />
-      <LoginButton />
-      <p></p>
-      <LogoutButton />
-    </>
-  )
+  return ( <CommonLayout />)
 }
 
 export default App

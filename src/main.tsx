@@ -1,8 +1,11 @@
+import "./assets/setylesheets/index.scss"
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
 import App from './App.tsx'
 import { Auth0Provider } from '@auth0/auth0-react'
+import { ConfigProvider } from "antd"
+import { antdThemeConfig } from "./assets/setylesheets/config/AntdThemeConfig.ts"
 
 // The domain of your Auth0 tenant. Generlly, you can find this in the Auth0 Dashboard under your Application's Settings in the domain field. If you are using a custom domain, you should set this to the value of your custom domain instead.
 // Add custom domain ask to verfiy credit card, so i havent config it.
@@ -14,9 +17,12 @@ const redirectUrl = window.location.origin
 const authParams = { redirect_uri: redirectUrl }
 
 createRoot(document.getElementById('root')!).render(
-  <Auth0Provider domain={domain} clientId={clientId} authorizationParams={authParams}>
-    <StrictMode>
-      <App />
-    </StrictMode>
-  </Auth0Provider>,
+  <ConfigProvider theme={ antdThemeConfig }>
+    <Auth0Provider domain={domain} clientId={clientId} authorizationParams={authParams}>
+      <StrictMode>
+        <App />
+      </StrictMode>
+    </Auth0Provider>
+  </ConfigProvider>
+  ,
 )
