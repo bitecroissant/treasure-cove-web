@@ -1,14 +1,10 @@
 import { useAuth0 } from "@auth0/auth0-react"
 import { LoginButton } from "../Login/LoginButton"
 import { LogoutButton } from "../Login/LogoutButton"
-import { Avatar, Breadcrumb, Flex, Layout, Menu, theme } from "antd"
+import { Avatar, Flex, Layout, theme } from "antd"
 import { Header, Content, Footer } from "antd/es/layout/layout"
 
 
-const items = Array.from({ length: 15 }).map((_, index) => ({
-  key: index + 1,
-  label: `nav ${index + 1}`,
-}));
 export const CommonLayout: React.FC = () => {
   const { user, isAuthenticated, isLoading } = useAuth0()
   const isLogin = !isLoading && isAuthenticated
