@@ -1,5 +1,11 @@
-# React + TypeScript + Vite
+# 宝藏湾
 
+前端项目
+
+## 1. [auth0](https://auth0.com/docs/quickstart/spa/react/interactive)
+1. 安装 `pnpm install @auth0/auth0-react`
+
+## other
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
